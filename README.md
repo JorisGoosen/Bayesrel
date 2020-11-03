@@ -35,3 +35,4 @@ plot_strel(res, estimate = "omega")
 ## return the probability that coefficient alpha is larger than .70
 p_strel(res, estimate = "alpha", low.bound = .70)
 ```
+

@@ -180,23 +180,23 @@ struct constraintmatrix *constraints_R2csdpArma(const Rcpp::List& A)
 }
 
 
-void printBlockMat(const blockmatrix& C) {
-    Rcpp::Rcout << "nblocks: " << C.nblocks << std::endl;
-    int j;
-    for (j=1; j<=C.nblocks; j++) {
-        Rcpp::Rcout << "blocksize: " << C.blocks[j].blocksize << std::endl;
-        Rcpp::Rcout << "blockcategory: " << C.blocks[j].blockcategory << std::endl;
-        Rcpp::Rcout << "blockdatarec.vec: " << *C.blocks[j].data.vec << std::endl;
-        Rcpp::Rcout << "blockdatarec.mat: " << *C.blocks[j].data.mat << std::endl;
-    }
-    return;
-}
-
-
-void printConstMat (const constraintmatrix& S, int k) {
-    int i;
-    for (i=1; i<=k; i++) {
-        Rcpp::Rcout << "stuff: " << S.blocks[i].blocksize << std::endl;
-    }
-    return;
-}
+// void printBlockMat(const blockmatrix& C) {
+//     Rcpp::Rcout << "nblocks: " << C.nblocks << std::endl;
+//     int j;
+//     for (j=1; j<=C.nblocks; j++) {
+//         Rcpp::Rcout << "blocksize: " << C.blocks[j].blocksize << std::endl;
+//         Rcpp::Rcout << "blockcategory: " << C.blocks[j].blockcategory << std::endl;
+//         Rcpp::Rcout << "blockdatarec.vec: " << *C.blocks[j].data.vec << std::endl;
+//         Rcpp::Rcout << "blockdatarec.mat: " << *C.blocks[j].data.mat << std::endl;
+//     }
+//     return;
+// }
+//
+//
+// void printConstMat (const constraintmatrix& S, int k) {
+//     int i;
+//     for (i=1; i<=k; i++) {
+//         Rcpp::Rcout << "stuff: " << S.blocks[i].blocksize << std::endl;
+//     }
+//     return;
+// }

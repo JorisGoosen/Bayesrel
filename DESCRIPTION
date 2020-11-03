@@ -9,10 +9,10 @@ Authors@R: c(person("Julius M.", "Pfadt", email = "julius.pfadt@gmail.com",
              person("Don", "van den Bergh",
                   role = c("aut")), 
              person("Joris", "Goosen", 
-                    role = c("ctb"))
-                  )
+                    role = c("aut"))
+                    )
 Description: Functionality for the most common single test reliability estimates is provided:  
-    Coefficient alpha, 'Guttman's' lambda-2/-4/-6, the greatest lower bound and coefficient omega. 
+    Coefficient alpha, 'Guttman's' lambda-2/-4/-6, the Greatest lower bound and coefficient omega. 
     The Bayesian estimates are provided with credible intervals. 
     The frequentist estimates are provided with bootstrapped confidence intervals
     The method for the Bayesian estimates, except for omega, 

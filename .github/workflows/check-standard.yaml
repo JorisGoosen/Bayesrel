@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - Cpp
+      - CppJoris
   # pull_request:
   #   branches:
   #     - master
