@@ -1,3 +1,4 @@
+CXX_STD=CXX11
 PKG_CFLAGS=-DNOSHORTS
 PKG_CPPFLAGS=-ICsdp/include -DNOSHORTS
 PKG_LIBS=-LCsdp/lib -lsdp ${LAPACK_LIBS} ${BLAS_LIBS} ${FLIBS} -lm
@@ -5,5 +6,5 @@ PKG_LIBS=-LCsdp/lib -lsdp ${LAPACK_LIBS} ${BLAS_LIBS} ${FLIBS} -lm
 $(SHLIB): Csdp.ts
 
 Csdp.ts:
-	cd Csdp/lib && $(MAKE) libsdp.a CC="$(CC)"-DDEFINE_FUNCTIONS_LAPACK_BLAS $(CLINK_CPPFLAGS)  CFLAGS="$(CFLAGS) $(CPICFLAGS) -DNOSHORTS -I../include" AR=$(AR) RANLIB=$(RANLIB)
+	cd Csdp/lib && $(MAKE) libsdp.a CC="$(CC)"  CFLAGS="-DDEFINE_FUNCTIONS_LAPACK_BLAS $(CLINK_CPPFLAGS) $(CFLAGS) $(CPICFLAGS) -DNOSHORTS -I../include" AR=$(AR) RANLIB=$(RANLIB)
 	touch $@
