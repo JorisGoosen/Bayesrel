@@ -1,7 +1,7 @@
 CXX_STD=CXX11
 PKG_CFLAGS=-DNOSHORTS
 PKG_CPPFLAGS=-ICsdp/include -DNOSHORTS
-PKG_LIBS=-Lsrc-${R_ARCH}/Csdp/lib -lsdp ${LAPACK_LIBS} ${BLAS_LIBS} ${FLIBS} -lm
+PKG_LIBS=-L./Csdp/lib -lsdp ${LAPACK_LIBS} ${BLAS_LIBS} ${FLIBS} -lm
 
 $(SHLIB): Csdp.ts
 
