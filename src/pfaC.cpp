@@ -30,7 +30,7 @@ List pfaArma(const arma::mat& X) {
         lambda = eigvec.col(k-1) * sqrt(eigval(k-1));
         R_mod = lambda * lambda.t();
         double h2_new = trace(R_mod);
-        error = abs(h2 - h2_new);
+        error = std::fabs(h2 - h2_new);
         h2 = h2_new;
         R.diag() = R_mod.diag();
         i += 1;
